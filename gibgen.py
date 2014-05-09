@@ -19,6 +19,10 @@ import fileinput,string,math,random
 ##        [1,2,3] and new_indices = [3,2,1] for the word "brave", we place
 ##        chars[1] in its new home, chars[3] such that the word reads "brare"
 ##        and we continue until our word reads "bvare"
+##    Bugs
+##        if two words are separated by a special character like
+##        "second-largest" this will treat it as one word instead of
+##        two.
 
 def gibify(word):
     

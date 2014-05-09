@@ -58,7 +58,7 @@ Quick Start
 -----------
 
 * Replace this text with instructions on how to execute your program
-* What programming language did you use? See [here](http://ideone.com/) for the supported ones.
+This was written in Python 2.7.6,
 * Also tell us anything else the reviewer should know about your code
 
 
