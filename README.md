@@ -56,7 +56,7 @@ For completion by applicant
 
 Quick Start
 -----------
-To run this program you must have python 2.7.6 installed on your computer.  
+To run this program you must have [python 2.7.6](https://www.python.org/download/releases/2.7.6/) installed on your computer.  
 
 It will accept input as an argument or as STDIN
 - 'python2 gibgen.py "This is a String"'
