@@ -1,4 +1,4 @@
-import fileinput,string,math,random
+import sys,string,math,random
 
 ## gibify
 ##    Arguments
@@ -41,7 +41,7 @@ def gibify(word):
         new_indices = swappable_char_indices[:]
         
 ##        keep a copy of the chars array so we can swap in place without
-##        loosing our data
+##        losing our data
         chars_copy = chars[:]
         random.shuffle(new_indices)
         for original_i,new_i in zip(swappable_char_indices,new_indices):
@@ -50,7 +50,12 @@ def gibify(word):
     else:
         return word
 
-for line in fileinput.input():
+if len(sys.argv)==1:
+    inputText = sys.stdin
+else:
+    inputText = sys.argv[1:]
+
+for line in inputText:
     output=""
     tokens = line.split(" ")
     for token in tokens:
