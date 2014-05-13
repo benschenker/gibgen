@@ -56,10 +56,15 @@ For completion by applicant
 
 Quick Start
 -----------
+To run this program you must have python 2.7.6 installed on your computer.  
 
-* Replace this text with instructions on how to execute your program
-This was written in Python 2.7.6,
-* Also tell us anything else the reviewer should know about your code
+It will accept input as an argument or as STDIN
+- 'python2 gibgen.py "This is a String"'
+- 'cat mystringfile.txt | python2 gibgen.py'
+
+This was written in Python 2.7.6
+
+This implementation works well for all cases that I tried except when two separate words are separated only by a special character (e.g. hyphen), where it treats that as one word.  
 
 
 Coding Questions
@@ -67,6 +72,9 @@ Coding Questions
 
 Question 1: "How did you approach the problem?" (500 words or less)
 
+I approached the project at hand through a simplify-complicate strategy.  While the problem seemed trivial at first, I began to realize that the devil was in the details – the punctuation, the spaces, the first and last letters of each word, etc.  So I first simplified the problem to the base case – scrambling only the middle letters in a word while avoiding the first and last.  Once I worked out how to solve that I introduced the required complications one at a time until my solution fit the whole problem.  
 
 
 Question 2: "What was the most difficult aspect of the solution?" (500 words or less)
+
+The most difficult part of the solution was making sure that the punctuation within or around words would not become scrambled.    I started the problem by solving the simple case without having to do much work on the character level: I removed the first and last characters of a “word”, mixed up the rest, and put it all back together.  This actually worked quite well and was very simple but was not nearly robust enough to deal with punctuation.  After a bit of thought I realized that I just needed to generalize my existing solution: first filter out the characters that would need jumbling and then jumble them in place.  Once I did this the rest of the solution  came together quickly.  
