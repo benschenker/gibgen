@@ -4,7 +4,7 @@ import sys,string,math,random
 ##    Arguments
 ##        word: a string of characters to be turned into gibberish keeping the
 ##         first and last characters in place and ignoring non-letters Assumes
-##         input is one word, without any spaces (it will work ine if spaces
+##         input is one word, without any spaces (it will work fine if spaces
 ##         exist but it will only ignore the first and last letters it sees in
 ##         the string so to qualify as "Gibberish" this would have to be true)
 ##    Return
